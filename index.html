@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vorant Gold | Corporate Gifting Concierge</title>
-  <meta name="description" content="Vorant Gold Corporate Gifting Concierge handles closing gifts, client gifts, employee gifts, and executive gifting end-to-end. You choose the budget. We handle the rest." />
+  <meta name="description" content="Vorant Gold Corporate Gifting Concierge handles closing gifts, client gifts, employee gifts, and executive gifting end-to-end." />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap');
 
@@ -15,7 +15,6 @@
       --panel-2: #171717;
       --gold: #c9a24a;
       --gold-soft: #e4c97c;
-      --gold-deep: #8f6a25;
       --text: #f5f2ea;
       --muted: #b8b0a3;
       --line: rgba(255,255,255,0.08);
@@ -26,6 +25,7 @@
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -36,7 +36,6 @@
     }
 
     a { color: inherit; text-decoration: none; }
-    
 
     .container {
       width: min(calc(100% - 2rem), var(--max));
@@ -48,7 +47,7 @@
       top: 0;
       z-index: 50;
       backdrop-filter: blur(14px);
-      background: rgba(5,5,5,0.82);
+      background: rgba(5, 5, 5, 0.82);
       border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
@@ -63,11 +62,21 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 0.85rem;
     }
 
-    
-    
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .brand-mark {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--gold-soft);
+      font-weight: 700;
     }
 
     .brand-sub {
@@ -171,7 +180,10 @@
       font-weight: 800;
     }
 
-    h1, h2, h3 { margin: 0 0 1rem; line-height: 1.08; }
+    h1, h2, h3 {
+      margin: 0 0 1rem;
+      line-height: 1.08;
+    }
 
     h1 {
       font-family: "Cormorant Garamond", serif;
@@ -238,13 +250,10 @@
       min-height: 100%;
     }
 
-    .hero-crest {
-      width: 110px;
-      height: 110px;
-      object-fit: contain;
-      display: block;
+    .hero-card-top {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(201,162,74,0.14);
       margin-bottom: 1rem;
-      filter: drop-shadow(0 10px 26px rgba(201,162,74,0.20));
     }
 
     .card-label {
@@ -312,7 +321,10 @@
       box-shadow: var(--shadow);
     }
 
-    .card p { color: var(--muted); margin: 0; }
+    .card p {
+      color: var(--muted);
+      margin: 0;
+    }
 
     .bullet-list {
       list-style: none;
@@ -407,28 +419,30 @@
       color: var(--text);
     }
 
-    select:focus option {
-      background-color: #111111;
-      color: var(--text);
-    }
-
     select::-ms-expand {
       display: none;
     }
 
-    input::placeholder, textarea::placeholder { color: #8f887d; }
+    input::placeholder,
+    textarea::placeholder {
+      color: #8f887d;
+    }
 
-    select option[disabled],
     select option[value=""] {
       color: #b8b0a3;
     }
 
-    input:focus, select:focus, textarea:focus {
+    input:focus,
+    select:focus,
+    textarea:focus {
       border-color: rgba(201,162,74,0.75);
       box-shadow: 0 0 0 4px rgba(201,162,74,0.10);
     }
 
-    textarea { min-height: 130px; resize: vertical; }
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
 
     .small-note {
       color: var(--muted);
@@ -534,8 +548,7 @@
         </div>
 
         <aside class="panel hero-card" aria-label="Overview card">
-          <img class="hero-crest" src="/mnt/data/a_logo_design_for_vorant_gold_is_featured_in_the_d.png" alt="Vorant Gold crest" />
-          <div>
+          <div class="hero-card-top">
             <span class="card-label">The Vorant Gold Standard</span>
             <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">A discreet, polished gifting experience from first request to final delivery.</h2>
             <p style="color: var(--muted); margin: 0;">
@@ -550,8 +563,8 @@
             </div>
             <div class="process-item">
               <span>2</span>
-              <strong>Review 3 curated options</strong>
-              <div>Option A value, Option B balance, Option C premium.</div>
+              <strong>Review curated options</strong>
+              <div>Clear selections, clean pricing, and expected delivery timing.</div>
             </div>
             <div class="process-item">
               <span>3</span>
@@ -616,7 +629,7 @@
             <h3>What makes Vorant Gold different</h3>
             <ul class="bullet-list">
               <li>Ship-only model for cleaner operations and safety</li>
-              <li>Curated A / B / C options instead of catalog overload</li>
+              <li>Curated recommendations instead of catalog overload</li>
               <li>Approval-first, payment-first workflow</li>
               <li>Corporate-first tone and premium presentation</li>
               <li>Built to scale into future Vorant Gold signature products</li>
@@ -728,16 +741,16 @@
               <label>
                 Gifting Category
                 <span class="select-wrap">
-                <select name="gift_type">
-                  <option value="">Select one</option>
-                  <option>Closing gifts</option>
-                  <option>Client appreciation</option>
-                  <option>Employee gifts</option>
-                  <option>Holiday gifting</option>
-                  <option>Executive gifts</option>
-                  <option>Referral gifts</option>
-                  <option>Other</option>
-                </select>
+                  <select name="gift_type">
+                    <option value="">Select one</option>
+                    <option>Closing gifts</option>
+                    <option>Client appreciation</option>
+                    <option>Employee gifts</option>
+                    <option>Holiday gifting</option>
+                    <option>Executive gifts</option>
+                    <option>Referral gifts</option>
+                    <option>Other</option>
+                  </select>
                 </span>
               </label>
               <label>
@@ -761,23 +774,23 @@
               <label>
                 Delivery Structure
                 <span class="select-wrap">
-                <select name="shipping_type">
-                  <option value="">Select one</option>
-                  <option>One address</option>
-                  <option>Multiple addresses</option>
-                  <option>Not sure yet</option>
-                </select>
+                  <select name="shipping_type">
+                    <option value="">Select one</option>
+                    <option>One address</option>
+                    <option>Multiple addresses</option>
+                    <option>Not sure yet</option>
+                  </select>
                 </span>
               </label>
               <label>
                 Alcohol Included?
                 <span class="select-wrap">
-                <select name="alcohol_policy">
-                  <option value="">Select one</option>
-                  <option>Yes, if legally available through vendor fulfillment</option>
-                  <option>No</option>
-                  <option>Open to alcohol-free alternatives</option>
-                </select>
+                  <select name="alcohol_policy">
+                    <option value="">Select one</option>
+                    <option>Yes, if legally available through vendor fulfillment</option>
+                    <option>No</option>
+                    <option>Open to alcohol-free alternatives</option>
+                  </select>
                 </span>
               </label>
             </div>
@@ -808,6 +821,3 @@
   </footer>
 </body>
 </html>
-
-
-
