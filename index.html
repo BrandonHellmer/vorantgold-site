@@ -137,12 +137,20 @@
       padding: 0;
       background:
         linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.75)),
-        url("hero-vorant-gold.png");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
+
+      .hero {
+  min-height: 720px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.75)),
+    url("hero-vorant-gold.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
 
     .hero-simple {
       width: min(calc(100% - 2rem), var(--max));
@@ -604,3 +612,4 @@
   </footer>
 </body>
 </html>
+
