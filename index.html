@@ -92,155 +92,6 @@
 
     .nav-links a:hover { color: var(--gold-soft); }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 50px;
-      padding: 0.95rem 1.35rem;
-      border-radius: 999px;
-      font-weight: 800;
-      border: 1px solid transparent;
-      transition: 180ms ease;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      color: #111;
-      background: linear-gradient(135deg, var(--gold-soft), var(--gold));
-      box-shadow: 0 10px 24px rgba(201,162,74,0.18);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 14px 30px rgba(201,162,74,0.24);
-    }
-
-    .panel {
-      background: linear-gradient(180deg, var(--panel-2), var(--panel));
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vorant Gold | Corporate Gifting Concierge</title>
-  <meta name="description" content="Vorant Gold is a luxury corporate gifting concierge for client, closing, and executive gifts." />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
-
-    :root {
-      --bg: #050505;
-      --panel: #121212;
-      --panel-2: #171717;
-      --gold: #c9a24a;
-      --gold-soft: #e4c97c;
-      --text: #f5f2ea;
-      --muted: #b8b0a3;
-      --line: rgba(255,255,255,0.08);
-      --shadow: 0 18px 50px rgba(0,0,0,0.42);
-      --radius: 22px;
-      --max: 1140px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      background: linear-gradient(180deg, #050505 0%, #090909 100%);
-      color: var(--text);
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.6;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .container {
-      width: min(calc(100% - 1.5rem), var(--max));
-      margin: 0 auto;
-    }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(5,5,5,0.88);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      padding: 0.95rem 0;
-    }
-
-    .brand-mark {
-      display: block;
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.45rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold-soft);
-      font-weight: 700;
-      line-height: 1;
-    }
-
-    .brand-sub {
-      display: block;
-      margin-top: 0.4rem;
-      font-size: 0.7rem;
-      color: var(--muted);
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      line-height: 1.2;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      font-size: 0.95rem;
-      color: rgba(245,242,234,0.92);
-    }
-
-    .nav-links a:hover { color: var(--gold-soft); }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 50px;
-      padding: 0.95rem 1.35rem;
-      border-radius: 999px;
-      font-weight: 800;
-      border: 1px solid transparent;
-      transition: 180ms ease;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      color: #111;
-      background: linear-gradient(135deg, var(--gold-soft), var(--gold));
-      box-shadow: 0 10px 24px rgba(201,162,74,0.18);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 14px 30px rgba(201,162,74,0.24);
-    }
-
     .panel {
       background: linear-gradient(180deg, var(--panel-2), var(--panel));
       border: 1px solid rgba(255,255,255,0.07);
@@ -249,500 +100,14 @@
     }
 
     .hero {
-      min-height: 560px;
-      display: flex;
-      align-items: flex-end;
-      padding: 0;
+      min-height: 460px;
       background:
-        linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.72)),
+        linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.50)),
         url("hero-vorant-gold.png");
       background-size: cover;
-      background-position: center top;
+      background-position: center center;
       background-repeat: no-repeat;
       border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 0.8rem;
-      color: var(--gold-soft);
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      font-size: 0.75rem;
-      font-weight: 800;
-    }
-
-    h1, h2, h3 {
-      margin: 0 0 1rem;
-      line-height: 1.08;
-    }
-
-    h1 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(2rem, 5vw, 3.6rem);
-      font-weight: 700;
-      letter-spacing: -0.05em;
-      max-width: 10ch;
-    }
-
-    h2 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(1.9rem, 7vw, 3rem);
-      font-weight: 600;
-      letter-spacing: -0.04em;
-      max-width: 12ch;
-    }
-
-    h3 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.35rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-    }
-
-    .hero-card p,
-    .section-head p,
-    .card p,
-    .small-note,
-    .muted {
-      color: var(--muted);
-    }
-
-    section {
-      padding: 2.5rem 0;
-    }
-
-    .section-head {
-      max-width: 760px;
-      margin-bottom: 1.35rem;
-    }
-
-    .grid-3,
-    .pricing-wrap,
-    .form-grid {
-      display: grid;
-      gap: 1rem;
-    }
-
-    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .pricing-wrap { grid-template-columns: 0.95fr 1.05fr; }
-    .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-    .card {
-      padding: 1.25rem;
-      border-radius: 20px;
-      background: linear-gradient(180deg, #181818, #121212);
-      border: 1px solid rgba(255,255,255,0.07);
-      box-shadow: var(--shadow);
-    }
-
-    .price-tag {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(2.6rem, 8vw, 4rem);
-      font-weight: 700;
-      color: var(--gold-soft);
-      letter-spacing: -0.05em;
-      margin-bottom: 0.2rem;
-    }
-
-    .quote-box {
-      padding: 1.2rem;
-      border-radius: 18px;
-      background: linear-gradient(180deg, #1a1a1a, #121212);
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .bullet-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 0.75rem;
-    }
-
-    .bullet-list li {
-      padding-left: 1.1rem;
-      position: relative;
-      color: var(--muted);
-    }
-
-    .bullet-list li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0.72rem;
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: var(--gold);
-      box-shadow: 0 0 0 6px rgba(201,162,74,0.10);
-    }
-
-    .select-wrap {
-      position: relative;
-    }
-
-    .select-wrap::after {
-      content: "⌄";
-      position: absolute;
-      right: 1rem;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--gold-soft);
-      font-size: 0.95rem;
-      pointer-events: none;
-    }
-
-    form {
-      display: grid;
-      gap: 0.95rem;
-    }
-
-    label {
-      display: grid;
-      gap: 0.35rem;
-      font-size: 0.92rem;
-      color: rgba(245,242,234,0.96);
-    }
-
-    input, select, textarea {
-      width: 100%;
-      border: 1px solid rgba(255,255,255,0.09);
-      background: linear-gradient(180deg, #131313, #0d0d0d);
-      color: var(--text);
-      border-radius: 14px;
-      padding: 0.95rem 1rem;
-      font: inherit;
-      outline: none;
-    }
-
-    select {
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      padding-right: 2.8rem;
-      cursor: pointer;
-      background-color: #111111;
-    }
-
-    select option {
-      background-color: #111111;
-      color: var(--text);
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-      color: #8f887d;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      border-color: rgba(201,162,74,0.75);
-      box-shadow: 0 0 0 4px rgba(201,162,74,0.10);
-    }
-
-    textarea {
-      min-height: 130px;
-      resize: vertical;
-    }
-
-    footer {
-      padding: 2rem 0 3rem;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .footer-wrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding-top: 1.4rem;
-    }
-
-    @media (max-width: 980px) {
-      .nav-links {
-        gap: 0.75rem;
-      }
-
-      .nav-links .btn {
-        min-height: 44px;
-        padding: 0.8rem 1rem;
-      }
-
-      .grid-3,
-      .pricing-wrap,
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        min-height: 500px;
-      }
-
-      .hero-card {
-        width: calc(100% - 1rem);
-        margin-bottom: 0.8rem;
-        padding: 1rem;
-      }
-
-      h1, h2 {
-        max-width: 100%;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .nav {
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        flex-direction: column;
-        align-items: flex-end;
-      }
-
-      .brand-mark {
-        font-size: 1.25rem;
-      }
-
-      .brand-sub {
-        font-size: 0.62rem;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-      }
-
-      .hero-actions .btn,
-      .nav-links .btn {
-        width: 100%;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header class="topbar">
-    <div class="container nav">
-      <a href="#top">
-        <span class="brand-mark">Vorant Gold</span>
-        <span class="brand-sub">Corporate Gifting Concierge</span>
-      </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#how">How It Works</a>
-        <a href="#pricing">Pricing</a>
-        </nav>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="hero-card">
-        <span class="eyebrow">Luxury corporate gifting</span>
-        <h1>Curated corporate gifting with polish and precision.</h1>
-        <p>
-          Vorant Gold handles client, closing, and executive gifting with a refined concierge process designed for firms that value presentation and efficiency.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#quote">Request a Quote</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="how">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">How it works</span>
-          <h2>A clean process designed for premium client service.</h2>
-          <p>Vorant Gold is built to reduce internal friction, simplify gifting decisions, and deliver a presentation standard worthy of high-value relationships.</p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card">
-            <h3>1. Share the brief</h3>
-            <p>Tell us the occasion, budget, quantity, and delivery timeline.</p>
-          </article>
-
-          <article class="card">
-            <h3>2. Review curated options</h3>
-            <p>We prepare a tailored recommendation aligned to your goals.</p>
-          </article>
-
-          <article class="card">
-            <h3>3. Approve and we coordinate</h3>
-            <p>Once approved, we handle invoicing, ordering, and shipment oversight.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="pricing">
-      <div class="container pricing-wrap">
-        <div class="panel" style="padding: 1.5rem;">
-          <span class="eyebrow">Pricing</span>
-          <h2>Transparent pricing.</h2>
-          <div class="price-tag">20%</div>
-          <p class="muted" style="margin-top: 0;">
-            Concierge service fee on total product cost, plus applicable shipping and tax.
-          </p>
-          <p style="margin-top: 1rem;"><strong>Minimum engagement:</strong> $500 in total product value.</p>
-          <p class="muted" style="margin-top: 1rem;">
-            Typical projects range from <strong>$500 – $5,000+</strong> depending on quantity and gift selection.
-          </p>
-        </div>
-
-        <div class="panel" style="padding: 1.5rem;">
-          <h3>Illustrative structure</h3>
-          <div class="quote-box" style="margin-bottom: 1rem;">
-            <strong>Gift procurement:</strong> $2,000<br />
-            <strong>Vorant Gold service fee:</strong> $400<br />
-            <strong>Shipping / insurance:</strong> $75<br />
-            <strong>Subtotal before tax:</strong> $2,475<br />
-            <strong>Applicable sales tax:</strong> calculated as required<br />
-            <strong>Final invoice total:</strong> provided at invoicing
-          </div>
-
-          <ul class="bullet-list">
-            <li>Signature presentation can be quoted separately</li>
-            <li>Multi-address coordination can be added where required</li>
-            <li>Rush fulfillment can be quoted on a case-by-case basis</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="quote">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Begin your request</span>
-          <h2>Tell us what you would like arranged.</h2>
-          <p>Share a few details below and Vorant Gold will prepare a tailored recommendation aligned to your occasion, budget, and delivery requirements.</p>
-        </div>
-
-        <div class="panel" style="padding: 1.5rem;">
-          <form action="https://formspree.io/f/mkoqgojy" method="post">
-            <input type="hidden" name="_subject" value="New Vorant Gold concierge request" />
-            <input type="hidden" name="_next" value="https://www.vorantgold.com/thank-you.html" />
-
-            <div class="form-grid">
-              <label>
-                Company / Firm Name
-                <input type="text" name="company" placeholder="Company name" />
-              </label>
-              <label>
-                Primary Contact
-                <input type="text" name="name" placeholder="Your name" />
-              </label>
-            </div>
-
-            <div class="form-grid">
-              <label>
-                Email Address
-                <input type="email" name="email" placeholder="name@company.com" />
-              </label>
-              <label>
-                Phone Number
-                <input type="tel" name="phone" placeholder="(555) 555-5555" />
-              </label>
-            </div>
-
-            <div class="form-grid">
-              <label>
-                Gifting Category
-                <span class="select-wrap">
-                  <select name="gift_type">
-                    <option value="">Select one</option>
-                    <option>Closing gifts</option>
-                    <option>Client appreciation</option>
-                    <option>Employee gifts</option>
-                    <option>Holiday gifting</option>
-                    <option>Executive gifts</option>
-                    <option>Referral gifts</option>
-                    <option>Other</option>
-                  </select>
-                </span>
-              </label>
-              <label>
-                Quantity Requested
-                <input type="number" name="quantity" placeholder="10" min="1" />
-              </label>
-            </div>
-
-            <div class="form-grid">
-              <label>
-                Preferred Budget Per Gift
-                <input type="text" name="budget" placeholder="$100 per gift" />
-              </label>
-              <label>
-                Preferred Delivery Date
-                <input type="text" name="deadline" placeholder="Needed by April 10" />
-              </label>
-            </div>
-
-            <div class="form-grid">
-              <label>
-                Delivery Structure
-                <span class="select-wrap">
-                  <select name="shipping_type">
-                    <option value="">Select one</option>
-                    <option>One address</option>
-                    <option>Multiple addresses</option>
-                    <option>Not sure yet</option>
-                  </select>
-                </span>
-              </label>
-              <label>
-                Alcohol Included?
-                <span class="select-wrap">
-                  <select name="alcohol_policy">
-                    <option value="">Select one</option>
-                    <option>Yes, if legally available through vendor fulfillment</option>
-                    <option>No</option>
-                    <option>Open to alcohol-free alternatives</option>
-                  </select>
-                </span>
-              </label>
-            </div>
-
-            <label>
-              Notes / Presentation Preferences
-              <textarea name="notes" placeholder="Examples: understated luxury, executive-level presentation, premium closing gift, black-and-gold signature packaging, memorable but corporate-safe"></textarea>
-            </label>
-
-            <button type="submit" class="btn btn-primary">Submit Concierge Request</button>
-            <p class="small-note">Vorant Gold operates on an approval-first, payment-first model. Orders are not procured until selection is approved, invoice payment has cleared, and applicable taxes and delivery charges are accounted for.</p>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-wrap">
-      <div>
-        <strong style="color: var(--text);">Vorant Gold</strong><br />
-        Corporate Gifting Concierge<br />
-        <a href="mailto:concierge@vorantgold.com" style="color: var(--gold-soft);">concierge@vorantgold.com</a>
-      </div>
-      <div>
-        © 2026 Vorant Gold. All rights reserved.
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
-
-    .hero-card {
-      width: min(calc(100% - 1.5rem), 620px);
-      margin: 0 auto 1rem auto;
-      padding: 1.2rem;
-      background: rgba(8,8,8,0.68);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 20px;
-      backdrop-filter: blur(8px);
-      box-shadow: var(--shadow);
     }
 
     .eyebrow {
@@ -783,24 +148,11 @@
       letter-spacing: -0.02em;
     }
 
-    .hero-card p,
     .section-head p,
     .card p,
     .small-note,
     .muted {
       color: var(--muted);
-    }
-
-    .hero-card p {
-      max-width: 54ch;
-      margin: 0 0 1.15rem;
-      font-size: 1rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 0.8rem;
-      flex-wrap: wrap;
     }
 
     section {
@@ -942,6 +294,21 @@
       resize: vertical;
     }
 
+    .submit-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0.95rem 1.35rem;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      color: #111;
+      background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+      box-shadow: 0 10px 24px rgba(201,162,74,0.18);
+      cursor: pointer;
+    }
+
     footer {
       padding: 2rem 0 3rem;
       color: var(--muted);
@@ -959,15 +326,6 @@
     }
 
     @media (max-width: 980px) {
-      .nav-links {
-        gap: 0.75rem;
-      }
-
-      .nav-links .btn {
-        min-height: 44px;
-        padding: 0.8rem 1rem;
-      }
-
       .grid-3,
       .pricing-wrap,
       .form-grid {
@@ -975,13 +333,7 @@
       }
 
       .hero {
-        min-height: 500px;
-      }
-
-      .hero-card {
-        width: calc(100% - 1rem);
-        margin-bottom: 0.8rem;
-        padding: 1rem;
+        min-height: 360px;
       }
 
       h1, h2 {
@@ -991,12 +343,13 @@
 
     @media (max-width: 640px) {
       .nav {
+        flex-direction: column;
         align-items: flex-start;
       }
 
       .nav-links {
-        flex-direction: column;
-        align-items: flex-end;
+        width: 100%;
+        justify-content: flex-start;
       }
 
       .brand-mark {
@@ -1005,15 +358,6 @@
 
       .brand-sub {
         font-size: 0.62rem;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-      }
-
-      .hero-actions .btn,
-      .nav-links .btn {
-        width: 100%;
       }
     }
   </style>
@@ -1028,14 +372,12 @@
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#how">How It Works</a>
         <a href="#pricing">Pricing</a>
-        <a href="#quote" class="btn btn-primary">Request a Quote</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
-    <sectionclass="hero"></sectionclass>
-    
+    <section class="hero"></section>
 
     <section id="how">
       <div class="container">
@@ -1197,7 +539,7 @@
               <textarea name="notes" placeholder="Examples: understated luxury, executive-level presentation, premium closing gift, black-and-gold signature packaging, memorable but corporate-safe"></textarea>
             </label>
 
-            <button type="submit" class="btn btn-primary">Submit Concierge Request</button>
+            <button type="submit" class="submit-btn">Submit Concierge Request</button>
             <p class="small-note">Vorant Gold operates on an approval-first, payment-first model. Orders are not procured until selection is approved, invoice payment has cleared, and applicable taxes and delivery charges are accounted for.</p>
           </form>
         </div>
