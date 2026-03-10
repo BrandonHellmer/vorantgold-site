@@ -19,7 +19,6 @@
       --gold-soft: #e4c97c;
       --text: #f5f2ea;
       --muted: #b8b0a3;
-      --line: rgba(255,255,255,0.08);
       --shadow: 0 18px 50px rgba(0,0,0,0.42);
       --radius: 22px;
       --max: 1140px;
@@ -122,7 +121,7 @@
 
     .hero-inner {
       padding: 4rem 0;
-      max-width: 760px;
+      max-width: 780px;
     }
 
     .eyebrow {
@@ -164,10 +163,22 @@
     }
 
     .hero-copy {
-      max-width: 640px;
+      max-width: 650px;
       color: rgba(245,242,234,0.92);
       font-size: 1.06rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .ideal-for {
+      margin: 0 0 1rem;
+      color: rgba(245,242,234,0.96);
+      font-size: 0.98rem;
+      font-weight: 600;
+    }
+
+    .ideal-for strong {
+      color: var(--gold-soft);
+      font-weight: 700;
     }
 
     .service-line {
@@ -249,13 +260,6 @@
       font-size: 0.95rem;
     }
 
-    .section-head p,
-    .card p,
-    .small-note,
-    .muted {
-      color: var(--muted);
-    }
-
     section {
       padding: 2.75rem 0;
     }
@@ -263,6 +267,14 @@
     .section-head {
       max-width: 760px;
       margin-bottom: 1.35rem;
+    }
+
+    .section-head p,
+    .card p,
+    .small-note,
+    .muted,
+    .form-status {
+      color: var(--muted);
     }
 
     .grid-3,
@@ -408,6 +420,16 @@
       margin: 0;
     }
 
+    .form-status {
+      font-size: 0.94rem;
+      margin: 0;
+      min-height: 1.2em;
+    }
+
+    .form-status.error {
+      color: #ffb3b3;
+    }
+
     .hidden-field {
       position: absolute !important;
       left: -9999px !important;
@@ -503,6 +525,9 @@
           <p class="hero-copy">
             Vorant Gold manages employee, client, closing, and executive gifting from sourcing to delivery,
             helping companies save internal time while maintaining a presentation standard worthy of high-value relationships.
+          </p>
+          <p class="ideal-for">
+            <strong>Ideal for:</strong> real estate teams, law firms, financial advisors, executive offices, and growing companies.
           </p>
           <p class="service-line">
             Employee gifts • Client gifts • Executive gifts • Closing gifts • Holiday gifting
@@ -604,9 +629,8 @@
         </div>
 
         <div class="panel" style="padding: 1.5rem;">
-          <form action="https://formspree.io/f/mkoqgojy" method="post">
+          <form id="vgForm" action="https://formspree.io/f/mkoqgojy" method="POST" novalidate>
             <input type="hidden" name="_subject" value="New Vorant Gold concierge request" />
-            <input type="hidden" name="_next" value="https://www.vorantgold.com/thank-you.html" />
 
             <label class="hidden-field" aria-hidden="true">
               Leave this field empty
@@ -715,6 +739,7 @@
               invoice payment has cleared, and applicable taxes and delivery charges are accounted for.
             </p>
             <p class="small-note">A concierge will review your request and respond within 1 business day.</p>
+            <p id="formStatus" class="form-status" aria-live="polite"></p>
           </form>
         </div>
       </div>
@@ -726,10 +751,54 @@
       <div>
         <strong style="color: var(--text);">Vorant Gold</strong><br />
         Corporate Gifting Concierge<br />
-        <a href="mailto:concierge@vorantgold.com" style="color: var(--gold-soft);">concierge@vorantgold.com</a>
+        <a href="mailto:quotes@vorantgold.com" style="color: var(--gold-soft);">quotes@vorantgold.com</a>
       </div>
       <div>© 2026 Vorant Gold. All rights reserved.</div>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("vgForm");
+      const status = document.getElementById("formStatus");
+
+      if (!form) return;
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        status.textContent = "";
+        status.classList.remove("error");
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        const formData = new FormData(form);
+
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+              "Accept": "application/json"
+            }
+          });
+
+          if (response.ok) {
+            form.reset();
+            window.location.href = "/thank-you.html";
+          } else {
+            status.textContent = "Submission error. Please review your information and try again.";
+            status.classList.add("error");
+          }
+        } catch (error) {
+          status.textContent = "Connection error. Please try again.";
+          status.classList.add("error");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
