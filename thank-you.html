@@ -9,6 +9,7 @@
 
     :root {
       --panel: #121212;
+      --panel-2: #171717;
       --gold: #c9a24a;
       --gold-soft: #e4c97c;
       --text: #f5f2ea;
@@ -33,9 +34,9 @@
 
     .card {
       width: min(100%, var(--max));
-      padding: 2rem;
+      padding: 2.2rem;
       border-radius: var(--radius);
-      background: linear-gradient(180deg, #171717, var(--panel));
+      background: linear-gradient(180deg, var(--panel-2), var(--panel));
       box-shadow: var(--shadow);
       border: 1px solid rgba(255,255,255,0.07);
     }
@@ -49,17 +50,39 @@
       margin-bottom: 1rem;
     }
 
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 0.8rem;
+      color: var(--gold-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.72rem;
+      font-weight: 800;
+    }
+
     h1 {
       margin: 0 0 0.75rem;
       font-family: "Cormorant Garamond", serif;
       font-size: clamp(2.2rem, 7vw, 3.4rem);
       line-height: 1.05;
+      letter-spacing: -0.04em;
     }
 
     p {
       color: var(--muted);
       margin: 0 0 1rem;
       font-size: 1rem;
+    }
+
+    .strong {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .contact-line {
+      margin-top: 1.2rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.07);
     }
 
     .btn {
@@ -73,18 +96,31 @@
       color: #111;
       background: linear-gradient(135deg, var(--gold-soft), var(--gold));
       text-decoration: none;
-      margin-top: 0.5rem;
+      margin-top: 0.65rem;
+      box-shadow: 0 10px 24px rgba(201,162,74,0.18);
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(201,162,74,0.22);
     }
   </style>
 </head>
 <body>
   <div class="card">
     <div class="brand">Vorant Gold</div>
+    <div class="eyebrow">Luxury Business Concierge</div>
     <h1>Request received.</h1>
     <p>Thank you for contacting Vorant Gold.</p>
-    <p>Your corporate gifting request has been received and is being reviewed.</p>
-    <p>You will receive a response within 1 business day with next steps or a curated recommendation aligned with your request.</p>
-    <p>For urgent matters, contact <strong style="color:#f5f2ea;">quotes@vorantgold.com</strong>.</p>
+    <p>Your concierge request has been received and is now being reviewed.</p>
+    <p>We will respond within <span class="strong">1 business day</span> with next steps or a tailored recommendation aligned with your request, timeline, and preferred level of execution.</p>
+    <p>Every request is reviewed individually to ensure a precise, client-specific solution.</p>
+
+    <div class="contact-line">
+      <p>For direct follow-up, contact <strong style="color:#f5f2ea;">request@vorantgold.com</strong> or <strong style="color:#f5f2ea;">concierge@vorantgold.com</strong>.</p>
+    </div>
+
     <a class="btn" href="/">Return to Vorant Gold</a>
   </div>
 </body>
