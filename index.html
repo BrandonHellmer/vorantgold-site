@@ -44,7 +44,6 @@
       --text: #f5f2ea;
       --muted: #b7afa1;
       --line: rgba(255,255,255,0.07);
-      --line-2: rgba(228,201,124,0.20);
       --shadow: 0 24px 60px rgba(0,0,0,0.46);
       --radius: 24px;
       --max: 1160px;
@@ -146,8 +145,8 @@
       align-items: center;
       position: relative;
       background:
-        linear-gradient(90deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.60) 42%, rgba(0,0,0,0.58) 100%),
-        linear-gradient(180deg, rgba(0,0,0,0.22), rgba(0,0,0,0.68)),
+        linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.62) 42%, rgba(0,0,0,0.56) 100%),
+        linear-gradient(180deg, rgba(0,0,0,0.24), rgba(0,0,0,0.74)),
         url("hero-vorant-gold.png");
       background-size: cover;
       background-position: center center;
@@ -162,7 +161,7 @@
       inset: 0;
       background:
         radial-gradient(circle at 78% 16%, rgba(228,201,124,0.10), transparent 22%),
-        linear-gradient(180deg, rgba(0,0,0,0.00), rgba(0,0,0,0.22));
+        linear-gradient(180deg, rgba(0,0,0,0.00), rgba(0,0,0,0.24));
       pointer-events: none;
       z-index: 0;
     }
@@ -170,7 +169,7 @@
     .hero-inner {
       position: relative;
       z-index: 1;
-      width: min(100%, 780px);
+      width: min(100%, 790px);
       padding: 5rem 0;
     }
 
@@ -200,7 +199,7 @@
 
     h2 {
       font-family: "Cormorant Garamond", serif;
-      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-size: clamp(2rem, 5vw, 3.15rem);
       font-weight: 600;
       letter-spacing: -0.04em;
       max-width: 16ch;
@@ -221,7 +220,10 @@
       margin-bottom: 0.9rem;
     }
 
-    .hero-copy strong {
+    .hero-copy strong,
+    .section-head strong,
+    .card strong,
+    .direct-copy strong {
       color: var(--gold-soft);
       font-weight: 700;
     }
@@ -246,7 +248,8 @@
     }
 
     .hero-actions,
-    .contact-actions {
+    .direct-actions,
+    .modal-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 0.9rem;
@@ -307,7 +310,7 @@
     }
 
     .section-head {
-      max-width: 860px;
+      max-width: 880px;
       margin-bottom: 1.45rem;
     }
 
@@ -316,7 +319,7 @@
     .muted,
     .small-note,
     .form-status,
-    .path-copy {
+    .direct-copy {
       color: var(--muted);
     }
 
@@ -329,8 +332,7 @@
 
     .grid-3,
     .pricing-wrap,
-    .form-grid,
-    .path-grid {
+    .form-grid {
       display: grid;
       gap: 1rem;
     }
@@ -343,8 +345,7 @@
       grid-template-columns: 0.96fr 1.04fr;
     }
 
-    .form-grid,
-    .path-grid {
+    .form-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -354,10 +355,6 @@
       background: linear-gradient(180deg, #181818, #111111);
       border: 1px solid rgba(255,255,255,0.07);
       box-shadow: var(--shadow);
-    }
-
-    .card strong {
-      color: var(--gold-soft);
     }
 
     .price-tag {
@@ -402,25 +399,41 @@
       box-shadow: 0 0 0 6px rgba(201,162,74,0.10);
     }
 
-    .contact-card {
-      padding: 1.35rem;
-      border-radius: 22px;
-      background: linear-gradient(180deg, #181818, #101010);
-      border: 1px solid rgba(255,255,255,0.07);
-      box-shadow: var(--shadow);
+    .direct-panel {
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
     }
 
-    .contact-label {
+    .direct-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at right top, rgba(228,201,124,0.08), transparent 25%);
+      pointer-events: none;
+    }
+
+    .direct-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 1rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .direct-label {
       display: inline-block;
       margin-bottom: 0.8rem;
       color: var(--gold-soft);
       text-transform: uppercase;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.22em;
       font-size: 0.72rem;
       font-weight: 800;
     }
 
-    .contact-email {
+    .direct-email {
       display: inline-block;
       margin-top: 0.8rem;
       color: var(--gold-soft);
@@ -560,7 +573,7 @@
       align-items: center;
       justify-content: center;
       padding: 1rem;
-      background: rgba(0,0,0,0.76);
+      background: rgba(0,0,0,0.78);
       backdrop-filter: blur(8px);
       z-index: 120;
     }
@@ -625,13 +638,6 @@
       font-weight: 700;
     }
 
-    .modal-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      margin-top: 1.15rem;
-    }
-
     .modal-close {
       background: rgba(255,255,255,0.03);
       color: var(--text);
@@ -647,7 +653,7 @@
       .grid-3,
       .pricing-wrap,
       .form-grid,
-      .path-grid {
+      .direct-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -674,7 +680,7 @@
       .hero {
         min-height: 600px;
         background:
-          linear-gradient(180deg, rgba(0,0,0,0.48), rgba(0,0,0,0.80)),
+          linear-gradient(180deg, rgba(0,0,0,0.52), rgba(0,0,0,0.82)),
           url("hero-vorant-gold-mobile.png");
         background-size: cover;
         background-position: center center;
@@ -690,7 +696,7 @@
       }
 
       .hero-actions,
-      .contact-actions,
+      .direct-actions,
       .modal-actions {
         flex-direction: column;
       }
@@ -745,11 +751,11 @@
           <h1>For those who prefer freedom over limitation.</h1>
 
           <p class="hero-copy">
-            Vorant Gold is a <strong>private business concierge</strong> built for companies that require more than a vendor list, a fixed catalog, or a one-lane sourcing model. We handle requests with discretion, precision, and range — from premium gifting and executive presentation to equipment, furnishings, specialty procurement, and tailored business solutions.
+            Vorant Gold is a <strong>private business concierge</strong> built for companies that require more than a vendor list, a fixed catalog, or a narrow sourcing model. We handle requests with discretion, precision, and range — from premium gifting and executive presentation to equipment, furnishings, specialty procurement, and tailored business solutions.
           </p>
 
           <p class="hero-copy">
-            This is not ordinary ordering. This is a more refined way for a business to have something handled <strong>properly, quietly, and without unnecessary friction.</strong>
+            This is not ordinary ordering. It is a quieter, sharper, more controlled way for a business to have something handled <strong>without compromise, without chaos, and without being confined to what everyone else offers.</strong>
           </p>
 
           <div class="hero-points">
@@ -761,7 +767,7 @@
           </div>
 
           <div class="hero-actions">
-            <a href="#request" class="btn-primary">Begin a Private Request</a>
+            <a href="#request" class="btn-primary">Enter The Request</a>
             <a href="#structure" class="btn-secondary">View Service Structure</a>
           </div>
 
@@ -778,10 +784,10 @@
           <span class="eyebrow">The Institution</span>
           <h2>A more private standard for business requests.</h2>
           <p>
-            Vorant Gold exists for businesses that do not want to be governed by whatever a standard platform, distributor, or generic supplier happens to offer. Where conventional systems create restriction, sameness, and delay, Vorant Gold provides <strong>range, control, and optionality</strong>.
+            Vorant Gold exists for businesses that do not want to be governed by whatever a standard platform, distributor, or generic supplier happens to offer. Where conventional systems create sameness, limitation, and delay, Vorant Gold provides <strong>range, control, and optionality</strong>.
           </p>
           <p>
-            Whether the request is client-facing, operational, executive, ceremonial, or completely custom, the objective remains the same: remove chaos, expand choice, and fulfill the request with a higher level of taste, discretion, and execution.
+            Whether the request is client-facing, operational, executive, ceremonial, or completely custom, the objective remains the same: remove friction, expand choice, and fulfill the request with a higher level of taste, discretion, and execution.
           </p>
         </div>
 
@@ -789,7 +795,7 @@
           <article class="card">
             <h3>Not confined to one lane</h3>
             <p>
-              Vorant Gold is not limited to one category, one supplier, or one narrow type of business request. The service is designed to move where the request moves.
+              Vorant Gold is not limited to one category, one supplier, or one narrow type of request. The service is built to move where the request moves.
             </p>
           </article>
 
@@ -801,9 +807,9 @@
           </article>
 
           <article class="card">
-            <h3>Designed for businesses worldwide</h3>
+            <h3>Designed for serious operators</h3>
             <p>
-              From barbershops and law firms to hospitality groups, offices, agencies, and executive teams, Vorant Gold serves businesses that expect something more refined than ordinary procurement.
+              From barbershops and law firms to hospitality groups, agencies, offices, and executive teams, Vorant Gold serves businesses that expect more than convenience.
             </p>
           </article>
         </div>
@@ -816,29 +822,29 @@
           <span class="eyebrow">How It Works</span>
           <h2>A controlled process for requests that require more than convenience.</h2>
           <p>
-            Every request is reviewed individually. That allows Vorant Gold to match the right sourcing path, presentation level, timing, and execution plan to the actual need instead of forcing your company into a generic ordering system.
+            Every request is reviewed individually. That allows Vorant Gold to match the right sourcing path, presentation level, timing, and execution structure to the actual need instead of forcing your company into a generic ordering system.
           </p>
         </div>
 
         <div class="grid-3">
           <article class="card">
-            <h3>1. Submit the request</h3>
+            <h3>1. Present the request</h3>
             <p>
-              Share what needs to be handled, the outcome you want, your budget direction, and any timeline, aesthetic, or operational details that matter.
+              Share what needs to be handled, the outcome you want, your budget direction, and any timing, aesthetic, or operational details that matter.
             </p>
           </article>
 
           <article class="card">
-            <h3>2. Review the recommendation</h3>
+            <h3>2. Review the direction</h3>
             <p>
-              Vorant Gold prepares a tailored direction built around the request itself — whether that involves gifting, equipment, client presentation, furnishings, sourcing, or a custom business need.
+              Vorant Gold prepares a tailored recommendation built around the request itself — whether that involves gifting, equipment, client presentation, furnishings, sourcing, or a custom business need.
             </p>
           </article>
 
           <article class="card">
             <h3>3. Approve and proceed</h3>
             <p>
-              Once approved, Vorant Gold coordinates the appropriate sourcing path and execution flow with discretion, clarity, and payment-first discipline.
+              Once approved, Vorant Gold coordinates the proper sourcing path and execution flow with discretion, clarity, and payment-first discipline.
             </p>
           </article>
         </div>
@@ -894,7 +900,7 @@
           <p style="margin-top: 1rem;"><strong>Minimum engagement:</strong> $500 in total product or project value.</p>
 
           <p class="muted" style="margin-top: 1rem;">
-            Some requests remain straightforward. Others require layered sourcing, elevated presentation, coordination across addresses, or custom execution. Those details are quoted according to the structure of the project itself.
+            Some requests remain straightforward. Others require layered sourcing, elevated presentation, coordination across addresses, or custom execution. Those details are quoted according to the structure of the request itself.
           </p>
         </div>
 
@@ -919,40 +925,24 @@
       </div>
     </section>
 
-    <section>
+    <section id="concierge">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Contact Pathways</span>
-          <h2>Two direct ways to enter the desk.</h2>
-          <p>
-            Some requests are best handled as a formal quote. Others require a more private conversation first. Vorant Gold keeps both paths open.
-          </p>
-        </div>
-
-        <div class="path-grid">
-          <article class="contact-card">
-            <span class="contact-label">Request A Quote</span>
-            <h3>For pricing, procurement, and structured project requests.</h3>
-            <p class="path-copy">
-              Use this path when you already know the category, scope, or commercial objective and want Vorant Gold to begin structuring the request.
-            </p>
-            <a class="contact-email" href="mailto:quotes@vorantgold.com">quotes@vorantgold.com</a>
-            <div class="contact-actions">
-              <a href="#request" class="btn-primary">Submit Request</a>
+        <div class="panel direct-panel">
+          <div class="direct-grid">
+            <div>
+              <span class="direct-label">Direct Concierge Access</span>
+              <h2>For matters that require a quieter entry.</h2>
+              <p class="direct-copy">
+                Some requests are better handled through direct conversation before structure begins. For private discussion, higher-touch coordination, or requests that require a more deliberate hand, contact the desk directly.
+              </p>
+              <a class="direct-email" href="mailto:concierge@vorantgold.com">concierge@vorantgold.com</a>
             </div>
-          </article>
 
-          <article class="contact-card">
-            <span class="contact-label">Speak With Concierge</span>
-            <h3>For private conversations, tailored direction, and higher-touch requests.</h3>
-            <p class="path-copy">
-              Use this path when the request needs discussion, discretion, or a more tailored approach before structure and sourcing begin.
-            </p>
-            <a class="contact-email" href="mailto:concierge@vorantgold.com">concierge@vorantgold.com</a>
-            <div class="contact-actions">
+            <div class="direct-actions">
               <a href="mailto:concierge@vorantgold.com" class="btn-secondary">Email Concierge</a>
+              <a href="#request" class="btn-primary">Proceed To Intake</a>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -960,10 +950,10 @@
     <section id="request">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Begin Your Request</span>
-          <h2>Enter the details. We will take it from there.</h2>
+          <span class="eyebrow">Private Request Intake</span>
+          <h2>Submit the request for private review.</h2>
           <p>
-            Submit the request below and Vorant Gold will review it privately, then respond with direction aligned to your business, timeline, budget, and preferred level of execution.
+            Provide the details below and the desk will review the matter, assess the appropriate direction, and respond in alignment with your business, budget, timeline, and preferred level of execution.
           </p>
         </div>
 
