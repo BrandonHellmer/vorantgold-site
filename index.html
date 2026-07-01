@@ -4,63 +4,61 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Vorant Gold | Private Business Concierge</title>
+  <title>Vorant Gold LLC | Luxury Lion’s Mane Mushroom Cultivation</title>
+
   <meta
     name="description"
-    content="Vorant Gold helps businesses source premium gifts, equipment, furnishings, and custom solutions without being locked into one vendor or catalog."
-  />
-  <meta
-    name="keywords"
-    content="private business concierge, business sourcing, luxury concierge, executive sourcing, corporate gifting, business procurement, custom business requests, Vorant Gold"
-  />
-  <meta name="author" content="Vorant Gold" />
-
-  <meta property="og:title" content="Vorant Gold | Private Business Concierge" />
-  <meta
-    property="og:description"
-    content="A private business concierge for premium gifts, equipment, furnishings, and custom business sourcing."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://vorantgold.com/" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Vorant Gold | Private Business Concierge" />
-  <meta
-    name="twitter:description"
-    content="A private business concierge for premium gifts, equipment, furnishings, and custom business sourcing."
+    content="Vorant Gold LLC is a luxury Lion’s Mane mushroom cultivation company based in Hobart, Indiana, focused on premium gourmet mushrooms for restaurants, private buyers, specialty markets, and wholesale food clients."
   />
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
-
     :root {
-      --bg: #040404;
-      --bg-2: #090909;
-      --panel: #111111;
-      --panel-2: #171717;
-      --gold: #c9a24a;
-      --gold-soft: #e4c97c;
-      --gold-deep: #9a7730;
-      --text: #f5f2ea;
-      --muted: #b7afa1;
-      --line: rgba(255,255,255,0.07);
-      --shadow: 0 24px 60px rgba(0,0,0,0.46);
-      --radius: 24px;
-      --max: 1160px;
+      --black: #020202;
+      --black2: #070806;
+      --charcoal: #11120f;
+      --panel: rgba(255,255,255,0.045);
+      --panel2: rgba(255,255,255,0.075);
+      --gold: #d8b85f;
+      --gold2: #f2dc91;
+      --cream: #f4efe4;
+      --muted: #aaa397;
+      --green: #0e2116;
+      --line: rgba(255,255,255,0.12);
+      --max: 1280px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
       background:
-        radial-gradient(circle at top, rgba(201,162,74,0.06), transparent 28%),
-        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
-      color: var(--text);
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        radial-gradient(circle at 74% 12%, rgba(216,184,95,0.12), transparent 28%),
+        radial-gradient(circle at 16% 18%, rgba(20,67,42,0.38), transparent 34%),
+        linear-gradient(180deg, #030303 0%, #080907 48%, #020202 100%);
+      color: var(--cream);
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
       overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(216,184,95,0.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(216,184,95,0.032) 1px, transparent 1px);
+      background-size: 90px 90px;
+      opacity: 0.28;
+      mask-image: radial-gradient(circle at center, black, transparent 78%);
+      z-index: -1;
     }
 
     a {
@@ -69,440 +67,456 @@
     }
 
     .container {
-      width: min(calc(100% - 1.5rem), var(--max));
+      width: min(calc(100% - 42px), var(--max));
       margin: 0 auto;
     }
 
-    .topbar {
+    header {
       position: sticky;
       top: 0;
-      z-index: 60;
-      background: rgba(5,5,5,0.82);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+      z-index: 100;
+      background: rgba(2,2,2,0.82);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
     }
 
     .nav {
+      height: 88px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 1rem;
-      padding: 1rem 0;
+      justify-content: space-between;
+      gap: 24px;
     }
 
-    .brand-wrap {
-      display: inline-block;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
     }
 
-    .brand-mark {
+    .vg {
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(242,220,145,0.72);
+      color: var(--gold2);
+      font-weight: 900;
+      font-size: 1.05rem;
+      letter-spacing: -0.12em;
+      transform: skewX(-10deg);
+      background:
+        linear-gradient(145deg, rgba(216,184,95,0.14), rgba(0,0,0,0.9));
+      box-shadow: 0 18px 40px rgba(216,184,95,0.12);
+    }
+
+    .brand-title {
       display: block;
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.5rem;
-      letter-spacing: 0.18em;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--gold2);
+      font-size: 1.55rem;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
-      color: var(--gold-soft);
-      font-weight: 700;
       line-height: 1;
+      font-weight: 700;
     }
 
     .brand-sub {
       display: block;
-      margin-top: 0.35rem;
-      font-size: 0.7rem;
+      margin-top: 7px;
       color: var(--muted);
-      letter-spacing: 0.23em;
+      font-size: 0.68rem;
+      letter-spacing: 0.34em;
       text-transform: uppercase;
-      line-height: 1.2;
+      font-weight: 800;
     }
 
-    .nav-links {
+    nav {
       display: flex;
       align-items: center;
-      gap: 1.1rem;
-      flex-wrap: wrap;
+      gap: 22px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 900;
+      color: rgba(244,239,228,0.82);
     }
 
-    .nav-links a {
-      font-size: 0.95rem;
-      color: rgba(245,242,234,0.92);
-      transition: 0.2s ease;
+    nav a:hover {
+      color: var(--gold2);
     }
 
-    .nav-links a:hover {
-      color: var(--gold-soft);
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border: 1px solid rgba(242,220,145,0.78);
+      color: var(--gold2);
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      font-weight: 900;
+      background: transparent;
+      transition: 180ms ease;
     }
 
-    .nav-cta {
-      padding: 0.75rem 1rem;
-      border-radius: 999px;
-      border: 1px solid rgba(228,201,124,0.28);
-      background: rgba(255,255,255,0.02);
+    .btn:hover {
+      background: var(--gold2);
+      color: #050505;
+      transform: translateY(-1px);
+    }
+
+    .btn-solid {
+      background: linear-gradient(135deg, var(--gold2), var(--gold));
+      color: #050505;
+      box-shadow: 0 18px 42px rgba(216,184,95,0.18);
     }
 
     .hero {
-      min-height: 710px;
-      display: flex;
-      align-items: center;
+      min-height: calc(100vh - 88px);
       position: relative;
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
       background:
-        linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.62) 42%, rgba(0,0,0,0.56) 100%),
-        linear-gradient(180deg, rgba(0,0,0,0.24), rgba(0,0,0,0.74)),
-        url("hero-vorant-gold.png");
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      isolation: isolate;
+        radial-gradient(circle at 72% 40%, rgba(244,239,228,0.95) 0 4%, rgba(244,239,228,0.58) 4.5% 7.5%, transparent 8%),
+        radial-gradient(circle at 82% 50%, rgba(244,239,228,0.88) 0 3.8%, rgba(244,239,228,0.48) 4.3% 7%, transparent 7.5%),
+        radial-gradient(circle at 65% 58%, rgba(244,239,228,0.72) 0 3.4%, rgba(244,239,228,0.38) 4% 6.8%, transparent 7.3%),
+        radial-gradient(circle at 88% 31%, rgba(244,239,228,0.68) 0 2.4%, rgba(244,239,228,0.38) 3% 5.8%, transparent 6.2%),
+        linear-gradient(135deg, transparent 0%, rgba(14,33,22,0.75) 56%, rgba(216,184,95,0.08) 100%);
+      filter: blur(0.2px);
     }
 
     .hero::after {
       content: "";
       position: absolute;
       inset: 0;
+      z-index: -1;
       background:
-        radial-gradient(circle at 78% 16%, rgba(228,201,124,0.10), transparent 22%),
-        linear-gradient(180deg, rgba(0,0,0,0.00), rgba(0,0,0,0.24));
-      pointer-events: none;
-      z-index: 0;
+        linear-gradient(90deg, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.80) 44%, rgba(0,0,0,0.28) 78%, rgba(0,0,0,0.82) 100%),
+        linear-gradient(180deg, rgba(0,0,0,0.32), rgba(0,0,0,0.86));
     }
 
-    .hero-inner {
-      position: relative;
-      z-index: 1;
-      width: min(100%, 790px);
-      padding: 5rem 0;
+    .hero-content {
+      max-width: 780px;
+      padding: 92px 0;
     }
 
     .eyebrow {
-      display: inline-block;
-      margin-bottom: 1rem;
-      color: var(--gold-soft);
+      display: block;
+      margin-bottom: 22px;
+      color: var(--gold2);
+      font-size: 0.78rem;
+      letter-spacing: 0.42em;
       text-transform: uppercase;
-      letter-spacing: 0.24em;
-      font-size: 0.74rem;
-      font-weight: 800;
+      font-weight: 900;
     }
 
-    h1, h2, h3 {
-      margin: 0 0 1rem;
-      line-height: 1.06;
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      margin: 0 0 24px;
+      line-height: 0.94;
+      letter-spacing: -0.055em;
     }
 
     h1 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(3rem, 7.6vw, 5.4rem);
-      font-weight: 700;
-      letter-spacing: -0.05em;
-      max-width: 11ch;
-      text-wrap: balance;
+      font-size: clamp(4rem, 9vw, 9.4rem);
+      max-width: 7.4ch;
     }
 
     h2 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(2rem, 5vw, 3.15rem);
-      font-weight: 600;
-      letter-spacing: -0.04em;
-      max-width: 16ch;
-      text-wrap: balance;
+      font-size: clamp(3rem, 6vw, 6rem);
+      max-width: 10ch;
     }
 
     h3 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.42rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
+      font-size: clamp(1.55rem, 2.2vw, 2.15rem);
+      line-height: 1.05;
+      margin-bottom: 14px;
     }
 
-    .hero-copy {
-      max-width: 700px;
-      color: rgba(245,242,234,0.92);
-      font-size: 1.08rem;
-      margin-bottom: 0.9rem;
-    }
-
-    .hero-copy strong,
-    .section-head strong,
-    .card strong,
-    .direct-copy strong {
-      color: var(--gold-soft);
-      font-weight: 700;
-    }
-
-    .hero-points {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.7rem;
-      margin: 1.35rem 0 1.5rem;
-    }
-
-    .hero-points span {
-      display: inline-flex;
-      align-items: center;
-      min-height: 40px;
-      padding: 0.62rem 0.95rem;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.11);
-      background: rgba(0,0,0,0.34);
-      color: rgba(245,242,234,0.94);
-      font-size: 0.92rem;
-    }
-
-    .hero-actions,
-    .direct-actions,
-    .modal-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-      margin-top: 1.2rem;
-    }
-
-    .btn-primary,
-    .btn-secondary,
-    .submit-btn,
-    .modal-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 52px;
-      padding: 0.95rem 1.35rem;
-      border-radius: 999px;
-      font-weight: 800;
-      transition: 0.2s ease;
-      border: none;
-      cursor: pointer;
-      font: inherit;
-    }
-
-    .btn-primary,
-    .submit-btn,
-    .modal-btn {
-      color: #111;
-      background: linear-gradient(135deg, var(--gold-soft), var(--gold));
-      box-shadow: 0 10px 24px rgba(201,162,74,0.18);
-    }
-
-    .btn-primary:hover,
-    .submit-btn:hover,
-    .modal-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 14px 30px rgba(201,162,74,0.22);
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.12);
-      color: var(--text);
-      background: rgba(255,255,255,0.03);
-    }
-
-    .btn-secondary:hover {
-      border-color: rgba(228,201,124,0.45);
-      color: var(--gold-soft);
-    }
-
-    .trust-line {
-      margin-top: 1rem;
+    p {
+      margin: 0 0 18px;
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 1.03rem;
+    }
+
+    .lead {
+      color: rgba(244,239,228,0.88);
+      font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+      max-width: 720px;
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 44px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 820px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.10);
+      gap: 1px;
+    }
+
+    .stat {
+      background: rgba(2,2,2,0.66);
+      padding: 22px;
+      min-height: 125px;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--gold2);
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 0.72rem;
+      margin-bottom: 10px;
+    }
+
+    .stat span {
+      color: var(--muted);
     }
 
     section {
-      padding: 3.15rem 0;
+      padding: 112px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
     }
 
-    .section-head {
-      max-width: 880px;
-      margin-bottom: 1.45rem;
-    }
-
-    .section-head p,
-    .card p,
-    .muted,
-    .small-note,
-    .form-status,
-    .direct-copy {
-      color: var(--muted);
-    }
-
-    .panel {
-      background: linear-gradient(180deg, rgba(23,23,23,0.94), rgba(14,14,14,0.96));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .grid-3,
-    .pricing-wrap,
-    .form-grid {
+    .split {
       display: grid;
-      gap: 1rem;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 58px;
+      align-items: center;
     }
 
-    .grid-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .pricing-wrap {
-      grid-template-columns: 0.96fr 1.04fr;
-    }
-
-    .form-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .card {
-      padding: 1.3rem;
-      border-radius: 20px;
-      background: linear-gradient(180deg, #181818, #111111);
-      border: 1px solid rgba(255,255,255,0.07);
-      box-shadow: var(--shadow);
-    }
-
-    .price-tag {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(2.8rem, 8vw, 4.25rem);
-      font-weight: 700;
-      color: var(--gold-soft);
-      letter-spacing: -0.05em;
-      margin-bottom: 0.2rem;
-    }
-
-    .quote-box {
-      padding: 1.2rem;
-      border-radius: 18px;
-      background: linear-gradient(180deg, #1b1b1b, #121212);
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .bullet-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 0.75rem;
-    }
-
-    .bullet-list li {
-      padding-left: 1.1rem;
-      position: relative;
-      color: var(--muted);
-    }
-
-    .bullet-list li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0.72rem;
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: var(--gold);
-      box-shadow: 0 0 0 6px rgba(201,162,74,0.10);
-    }
-
-    .direct-panel {
-      padding: 1.5rem;
+    .visual {
+      min-height: 540px;
       position: relative;
       overflow: hidden;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 48% 46%, rgba(244,239,228,0.95) 0 8%, rgba(244,239,228,0.52) 8.5% 14%, transparent 15%),
+        radial-gradient(circle at 60% 56%, rgba(244,239,228,0.86) 0 7%, rgba(244,239,228,0.42) 7.5% 13%, transparent 14%),
+        radial-gradient(circle at 38% 58%, rgba(244,239,228,0.72) 0 6%, rgba(244,239,228,0.32) 6.8% 12%, transparent 13%),
+        radial-gradient(circle at 68% 36%, rgba(244,239,228,0.62) 0 5%, rgba(244,239,228,0.25) 5.8% 10%, transparent 11%),
+        linear-gradient(135deg, #070807, #132117 55%, #020202);
+      box-shadow: 0 35px 110px rgba(0,0,0,0.58);
     }
 
-    .direct-panel::before {
+    .visual::before {
       content: "";
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(circle at right top, rgba(228,201,124,0.08), transparent 25%);
-      pointer-events: none;
+        repeating-linear-gradient(
+          105deg,
+          rgba(255,255,255,0.09) 0 1px,
+          transparent 1px 8px
+        );
+      opacity: 0.26;
+      mask-image: radial-gradient(circle at 55% 52%, black, transparent 42%);
     }
 
-    .direct-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 1rem;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .direct-label {
-      display: inline-block;
-      margin-bottom: 0.8rem;
-      color: var(--gold-soft);
-      text-transform: uppercase;
-      letter-spacing: 0.22em;
-      font-size: 0.72rem;
-      font-weight: 800;
-    }
-
-    .direct-email {
-      display: inline-block;
-      margin-top: 0.8rem;
-      color: var(--gold-soft);
-      font-weight: 700;
-      word-break: break-word;
-    }
-
-    .select-wrap {
-      position: relative;
-    }
-
-    .select-wrap::after {
-      content: "⌄";
+    .visual::after {
+      content: "LION’S MANE";
       position: absolute;
-      right: 1rem;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--gold-soft);
-      font-size: 0.95rem;
-      pointer-events: none;
+      left: 28px;
+      bottom: 24px;
+      color: var(--gold2);
+      letter-spacing: 0.28em;
+      font-size: 0.72rem;
+      font-weight: 900;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 40px;
+    }
+
+    .card {
+      min-height: 250px;
+      padding: 34px;
+      background: linear-gradient(180deg, var(--panel2), var(--panel));
+      border: 1px solid var(--line);
+    }
+
+    .card .num {
+      display: block;
+      margin-bottom: 30px;
+      color: var(--gold2);
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      font-weight: 900;
+    }
+
+    .feature {
+      position: relative;
+      min-height: 740px;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      padding: 0;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,0.94), rgba(0,0,0,0.52), rgba(0,0,0,0.92)),
+        radial-gradient(circle at 28% 46%, rgba(244,239,228,0.82) 0 5%, rgba(244,239,228,0.35) 5.5% 9%, transparent 10%),
+        radial-gradient(circle at 46% 34%, rgba(244,239,228,0.70) 0 4.5%, rgba(244,239,228,0.28) 5% 8%, transparent 9%),
+        radial-gradient(circle at 68% 52%, rgba(244,239,228,0.74) 0 5%, rgba(244,239,228,0.34) 5.5% 9%, transparent 10%),
+        linear-gradient(135deg, #050505, #142419 55%, #040404);
+    }
+
+    .feature::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(216,184,95,0.14) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(216,184,95,0.08) 1px, transparent 1px);
+      background-size: 120px 120px;
+      opacity: 0.28;
+    }
+
+    .feature-inner {
+      position: relative;
+      padding: 96px 0;
+      max-width: 860px;
+    }
+
+    .two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .box {
+      padding: 30px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,0.52);
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 26px;
+      color: rgba(244,239,228,0.82);
+    }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 8px;
+      height: 8px;
+      background: var(--gold2);
+    }
+
+    .business-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .business-panel {
+      padding: 48px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--panel2), var(--panel));
+    }
+
+    .finance-panel {
+      padding: 48px;
+      border: 1px solid rgba(216,184,95,0.28);
+      background:
+        radial-gradient(circle at 80% 10%, rgba(216,184,95,0.12), transparent 28%),
+        linear-gradient(180deg, rgba(19,33,23,0.56), rgba(255,255,255,0.035));
+    }
+
+    .metric {
+      padding: 22px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .metric:last-child {
+      border-bottom: none;
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--gold2);
+      text-transform: uppercase;
+      letter-spacing: 0.20em;
+      font-size: 0.72rem;
+      margin-bottom: 6px;
     }
 
     form {
       display: grid;
-      gap: 0.95rem;
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
     }
 
     label {
       display: grid;
-      gap: 0.35rem;
-      font-size: 0.92rem;
-      color: rgba(245,242,234,0.97);
+      gap: 8px;
+      color: var(--gold2);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 900;
+      font-size: 0.72rem;
     }
 
-    input, select, textarea {
+    input,
+    select,
+    textarea {
       width: 100%;
-      border: 1px solid rgba(255,255,255,0.09);
-      background: linear-gradient(180deg, #131313, #0c0c0c);
-      color: var(--text);
-      border-radius: 14px;
-      padding: 0.98rem 1rem;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,0.46);
+      color: var(--cream);
+      padding: 18px 16px;
       font: inherit;
       outline: none;
-    }
-
-    select {
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      padding-right: 2.8rem;
-      cursor: pointer;
-      background-color: #111111;
-    }
-
-    select option {
-      background-color: #111111;
-      color: var(--text);
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-      color: #8f887d;
+      border-radius: 0;
     }
 
     input:focus,
     select:focus,
     textarea:focus {
-      border-color: rgba(201,162,74,0.75);
-      box-shadow: 0 0 0 4px rgba(201,162,74,0.10);
+      border-color: rgba(242,220,145,0.92);
+      box-shadow: 0 0 0 4px rgba(216,184,95,0.08);
     }
 
     textarea {
@@ -510,541 +524,346 @@
       resize: vertical;
     }
 
-    .small-note {
-      font-size: 0.94rem;
-      margin: 0;
+    .contact-panel {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--panel2), var(--panel));
+      padding: 44px;
     }
 
-    .form-status {
-      font-size: 0.94rem;
-      margin: 0;
-      min-height: 1.2em;
-    }
-
-    .form-status.error {
-      color: #ffb3b3;
-    }
-
-    .hidden-field {
-      position: absolute !important;
-      left: -9999px !important;
-      opacity: 0 !important;
-      pointer-events: none !important;
-      height: 0 !important;
-      width: 0 !important;
-      overflow: hidden !important;
+    .note {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin: 4px 0 0;
     }
 
     footer {
-      padding: 2rem 0 3rem;
+      padding: 36px 0 48px;
       color: var(--muted);
-      font-size: 0.92rem;
     }
 
     .footer-wrap {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
+      gap: 18px;
       flex-wrap: wrap;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding-top: 1.5rem;
-    }
-
-    .footer-title {
-      color: var(--text);
-      font-weight: 700;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
-    }
-
-    .footer-links a {
-      color: var(--gold-soft);
-    }
-
-    .modal {
-      position: fixed;
-      inset: 0;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-      background: rgba(0,0,0,0.78);
-      backdrop-filter: blur(8px);
-      z-index: 120;
-    }
-
-    .modal.show {
-      display: flex;
-    }
-
-    .modal-card {
-      width: min(100%, 740px);
-      padding: 2rem;
-      border-radius: 26px;
-      background:
-        radial-gradient(circle at top right, rgba(228,201,124,0.08), transparent 26%),
-        linear-gradient(180deg, #181818, #101010);
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: 0 28px 80px rgba(0,0,0,0.55);
-      text-align: left;
-      position: relative;
-    }
-
-    .modal-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      padding: 1px;
-      background: linear-gradient(135deg, rgba(228,201,124,0.26), rgba(255,255,255,0.04));
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      pointer-events: none;
-    }
-
-    .modal-eyebrow {
-      display: inline-block;
-      margin-bottom: 0.8rem;
-      color: var(--gold-soft);
-      text-transform: uppercase;
-      letter-spacing: 0.22em;
-      font-size: 0.72rem;
-      font-weight: 800;
-    }
-
-    .modal-title {
-      margin: 0 0 0.8rem;
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(2.1rem, 6vw, 3.2rem);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-      color: var(--text);
-    }
-
-    .modal-copy {
-      color: var(--muted);
-      margin: 0 0 0.95rem;
-      font-size: 1rem;
-    }
-
-    .modal-copy strong {
-      color: var(--text);
-      font-weight: 700;
-    }
-
-    .modal-close {
-      background: rgba(255,255,255,0.03);
-      color: var(--text);
-      border: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .modal-close:hover {
-      border-color: rgba(228,201,124,0.45);
-      color: var(--gold-soft);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 28px;
     }
 
     @media (max-width: 980px) {
-      .grid-3,
-      .pricing-wrap,
-      .form-grid,
-      .direct-grid {
-        grid-template-columns: 1fr;
+      nav {
+        display: none;
       }
-    }
 
-    @media (max-width: 768px) {
       .nav {
-        flex-direction: column;
-        align-items: flex-start;
+        height: 76px;
       }
 
-      .nav-links {
-        width: 100%;
-        justify-content: flex-start;
-      }
-
-      .brand-mark {
-        font-size: 1.28rem;
+      .brand-title {
+        font-size: 1.08rem;
       }
 
       .brand-sub {
-        font-size: 0.62rem;
+        font-size: 0.58rem;
+        letter-spacing: 0.24em;
+      }
+
+      .vg {
+        width: 48px;
+        height: 48px;
       }
 
       .hero {
-        min-height: 600px;
-        background:
-          linear-gradient(180deg, rgba(0,0,0,0.52), rgba(0,0,0,0.82)),
-          url("hero-vorant-gold-mobile.png");
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
+        min-height: auto;
       }
 
-      .hero-inner {
-        padding: 3.4rem 0;
+      .hero-content {
+        padding: 88px 0;
       }
 
-      h1, h2 {
-        max-width: 100%;
+      .stats,
+      .split,
+      .cards,
+      .two,
+      .business-grid,
+      .form-grid {
+        grid-template-columns: 1fr;
       }
 
-      .hero-actions,
-      .direct-actions,
-      .modal-actions {
-        flex-direction: column;
+      section {
+        padding: 76px 0;
       }
 
-      .btn-primary,
-      .btn-secondary,
-      .submit-btn,
-      .modal-btn {
-        width: 100%;
+      .visual {
+        min-height: 420px;
       }
 
-      .hero-points span {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
+      .feature {
+        min-height: 680px;
       }
 
-      .modal-card {
-        padding: 1.4rem;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .hero {
-        min-height: 560px;
+      .business-panel,
+      .finance-panel,
+      .contact-panel {
+        padding: 28px;
       }
     }
   </style>
 </head>
+
 <body>
-  <header class="topbar">
+  <header>
     <div class="container nav">
-      <a href="#top" aria-label="Vorant Gold home" class="brand-wrap">
-        <span class="brand-mark">Vorant Gold</span>
-        <span class="brand-sub">Private Business Concierge</span>
+      <a href="#top" class="brand">
+        <div class="vg">VG</div>
+        <span>
+          <span class="brand-title">Vorant Gold</span>
+          <span class="brand-sub">Lion’s Mane Cultivation</span>
+        </span>
       </a>
 
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#institution">Why Vorant Gold</a>
-        <a href="#process">How It Works</a>
-        <a href="#structure">Service Structure</a>
-        <a href="#request" class="nav-cta">Begin Request</a>
+      <nav>
+        <a href="#product">Product</a>
+        <a href="#operation">Operation</a>
+        <a href="#business">Business</a>
+        <a href="#contact" class="btn btn-solid">Request Info</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
     <section class="hero">
-      <div class="container">
-        <div class="hero-inner">
-          <span class="eyebrow">Private Business Concierge</span>
-          <h1>Premium business sourcing without vendor limits.</h1>
+      <div class="container hero-content">
+        <span class="eyebrow">Hobart, Indiana · Luxury Gourmet Mushroom Cultivation</span>
 
-          <p class="hero-copy">
-            Vorant Gold helps businesses source <strong>premium gifts, equipment, furnishings, and custom business solutions</strong> without being locked into one vendor, one catalog, or one narrow system.
-          </p>
+        <h1>Lion’s Mane, perfected.</h1>
 
-          <p class="hero-copy">
-            We handle requests with discretion, clarity, and approval-first execution so your business can get what it needs <strong>without wasted time, limited options, or generic results.</strong>
-          </p>
+        <p class="lead">
+          Vorant Gold LLC is a premium Lion’s Mane mushroom cultivation company built for restaurants, private kitchens, specialty markets, and wholesale food buyers seeking a refined local source of gourmet mushrooms.
+        </p>
 
-          <div class="hero-points">
-            <span>Premium Gifting</span>
-            <span>Equipment & Furnishings</span>
-            <span>Custom Business Requests</span>
-            <span>Approval-First Execution</span>
-            <span>Freedom From Vendor Limits</span>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-solid">Request Availability</a>
+          <a href="#business" class="btn">View Business Model</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>Single-Strain Focus</strong>
+            <span>Focused on Lion’s Mane instead of a scattered product line.</span>
           </div>
 
-          <div class="hero-actions">
-            <a href="#request" class="btn-primary">Enter The Request</a>
-            <a href="#structure" class="btn-secondary">View Service Structure</a>
+          <div class="stat">
+            <strong>Premium Positioning</strong>
+            <span>Luxury food branding for chefs, markets, and serious buyers.</span>
           </div>
 
-          <p class="trust-line">
-            Private review • No obligation • Response within 1 business day
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="institution">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Why Vorant Gold</span>
-          <h2>A better option than being stuck with one catalog or supplier.</h2>
-          <p>
-            Vorant Gold is built for businesses that want more flexibility, better options, and a more tailored sourcing process than standard vendor systems usually allow.
-          </p>
-          <p>
-            Whether the need is client-facing, operational, executive, or custom, the goal is simple: <strong>reduce friction, expand choice, and handle the request properly.</strong>
-          </p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card">
-            <h3>Not limited to one category</h3>
-            <p>
-              From premium gifts and branded pieces to equipment, furnishings, and specialty business requests, Vorant Gold is built to handle more than one lane.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Built around better options</h3>
-            <p>
-              Your business should not be forced into whatever happens to be sitting inside a preset catalog. <strong>Options matter.</strong> Fit matters. Presentation matters.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Built for businesses that value time</h3>
-            <p>
-              For businesses that do not want to waste time searching, settling, or piecing things together. Vorant Gold exists to make the process easier, cleaner, and more effective.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="process">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">How It Works</span>
-          <h2>A simple process built around your actual request.</h2>
-          <p>
-            Every request is reviewed individually so Vorant Gold can match the right sourcing path, timing, and execution plan to your business instead of forcing you into a generic ordering system.
-          </p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card">
-            <h3>1. Present the request</h3>
-            <p>
-              Share what needs to be handled, the outcome you want, your budget direction, and any timing, aesthetic, or operational details that matter.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>2. Review the direction</h3>
-            <p>
-              Vorant Gold prepares a tailored recommendation built around the request itself — whether that involves gifting, equipment, client presentation, furnishings, sourcing, or a custom business need.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>3. Approve and proceed</h3>
-            <p>
-              Once approved, Vorant Gold coordinates the proper sourcing path and execution flow with discretion, clarity, and payment-first discipline.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Examples Of Range</span>
-          <h2>One service model that works across different business needs.</h2>
-          <p>
-            Vorant Gold is not built around a fixed product catalog. It is built to respond to different business environments with more flexibility and better sourcing options.
-          </p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card">
-            <h3>Presentation-focused businesses</h3>
-            <p>
-              For businesses where appearance, detail, and professional image matter — from premium tools and branded materials to furnishings and custom pieces.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Client, executive, and team requests</h3>
-            <p>
-              From milestone gifts and workspace pieces to hospitality items and recognition requests, Vorant Gold helps businesses source with more intention and less hassle.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Specialty sourcing & custom requests</h3>
-            <p>
-              For requests that do not fit ordinary ordering channels and need a more deliberate sourcing path, greater flexibility, and tighter control.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="structure">
-      <div class="container pricing-wrap">
-        <div class="panel" style="padding: 1.55rem;">
-          <span class="eyebrow">Service Structure</span>
-          <h2>Simple pricing. Approval-first execution.</h2>
-
-          <div class="price-tag">20%</div>
-          <p class="muted" style="margin-top: 0;">
-            Vorant Gold applies a 20% concierge service fee to the total product or project value, plus shipping, tax, insurance, and any approved presentation or fulfillment requirements. Smaller requests are subject to a minimum service fee.
-          </p>
-
-          <p class="muted" style="margin-top: 1rem;">
-            Larger or more complex requests are quoted based on scope, sourcing complexity, coordination needs, and delivery structure.
-          </p>
-        </div>
-
-        <div class="panel" style="padding: 1.55rem;">
-          <h3>Illustrative example</h3>
-
-          <div class="quote-box" style="margin-bottom: 1rem;">
-            <strong>Project procurement:</strong> $2,000<br />
-            <strong>Vorant Gold concierge fee:</strong> $400<br />
-            <strong>Shipping / insurance:</strong> $75<br />
-            <strong>Subtotal before tax:</strong> $2,475<br />
-            <strong>Applicable sales tax:</strong> calculated as required<br />
-            <strong>Final invoice total:</strong> issued prior to procurement
-          </div>
-
-          <ul class="bullet-list">
-            <li>Rush timelines can be quoted case by case</li>
-            <li>Premium presentation can be added separately where appropriate</li>
-            <li>Multi-address coordination can be structured when required</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="concierge">
-      <div class="container">
-        <div class="panel direct-panel">
-          <div class="direct-grid">
-            <div>
-              <span class="direct-label">Direct Concierge Access</span>
-              <h2>For requests that need direct conversation first.</h2>
-              <p class="direct-copy">
-                Some requests are better handled by email before formal submission. For private discussion, higher-touch coordination, or custom business needs, contact the desk directly.
-              </p>
-              <a class="direct-email" href="mailto:concierge@vorantgold.com">concierge@vorantgold.com</a>
-            </div>
-
-            <div class="direct-actions">
-              <a href="mailto:concierge@vorantgold.com" class="btn-secondary">Email Concierge</a>
-              <a href="#request" class="btn-primary">Proceed To Submission</a>
-            </div>
+          <div class="stat">
+            <strong>Indiana-Based</strong>
+            <span>Built in Hobart to serve Northwest Indiana and surrounding markets.</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="request">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Begin Request</span>
-          <h2>Submit your request for review.</h2>
+    <section id="product">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">The Product</span>
+
+          <h2>One crop. One standard.</h2>
+
           <p>
-            Provide the details below and Vorant Gold will review the request, assess the best direction, and respond based on your business needs, budget, timeline, and scope.
+            Vorant Gold begins with Lion’s Mane because it has the kind of culinary presence that can carry a premium brand. It is visually striking, texturally dense, and valuable to chefs looking for a mushroom that can become the center of a dish instead of a garnish.
+          </p>
+
+          <p>
+            The business is designed around quality, consistency, and presentation. The goal is not to become another basic produce vendor. The goal is to become a premium local supplier with a product that feels controlled, refined, and memorable.
           </p>
         </div>
 
-        <div class="panel" style="padding: 1.55rem;">
-          <form id="vgForm" action="https://formspree.io/f/mkoqgojy" method="POST" novalidate>
-            <input type="hidden" name="_subject" value="New Vorant Gold private business concierge request" />
+        <div class="visual"></div>
+      </div>
 
-            <label class="hidden-field" aria-hidden="true">
-              Leave this field empty
-              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
-            </label>
+      <div class="container">
+        <div class="cards">
+          <div class="card">
+            <span class="num">01</span>
+            <h3>Chef-grade texture</h3>
+            <p>Lion’s Mane has a dense, meaty texture that works for searing, roasting, slicing, and refined plated dishes.</p>
+          </div>
 
+          <div class="card">
+            <span class="num">02</span>
+            <h3>High visual value</h3>
+            <p>The unique structure gives it strong plate presence and a luxury product feel before it is even cooked.</p>
+          </div>
+
+          <div class="card">
+            <span class="num">03</span>
+            <h3>Local supply advantage</h3>
+            <p>Fresh local production gives restaurants and buyers a more reliable alternative to anonymous supply-chain mushrooms.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="operation" class="feature">
+      <div class="container feature-inner">
+        <span class="eyebrow">The Operation</span>
+
+        <h2>Controlled cultivation. Premium execution.</h2>
+
+        <p class="lead">
+          Vorant Gold is being positioned as a clean, small-batch mushroom cultivation operation with a luxury brand identity and a clear product focus.
+        </p>
+
+        <div class="two">
+          <div class="box">
+            <h3>Production Focus</h3>
+            <ul>
+              <li>Lion’s Mane mushroom cultivation</li>
+              <li>Small-batch harvest scheduling</li>
+              <li>Clean controlled growing environment</li>
+              <li>Quality-first handling and presentation</li>
+            </ul>
+          </div>
+
+          <div class="box">
+            <h3>Market Focus</h3>
+            <ul>
+              <li>Restaurants and chefs</li>
+              <li>Specialty food markets</li>
+              <li>Private buyers and premium kitchens</li>
+              <li>Wholesale and recurring local accounts</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="business">
+      <div class="container business-grid">
+        <div class="business-panel">
+          <span class="eyebrow">Business Position</span>
+
+          <h2>Built for growth, not hobby sales.</h2>
+
+          <p>
+            Vorant Gold LLC is structured as a premium mushroom cultivation brand with a clear commercial direction: produce high-quality Lion’s Mane mushrooms for buyers who value freshness, consistency, local sourcing, and elevated presentation.
+          </p>
+
+          <p>
+            The business model is designed to support direct restaurant relationships, specialty market placement, private orders, wholesale opportunities, and future product expansion once the Lion’s Mane operation is stable.
+          </p>
+
+          <p>
+            The brand identity is intentionally premium. Vorant Gold is not positioned as a backyard grower or farmers market side project. It is positioned as a serious gourmet cultivation company built to scale.
+          </p>
+        </div>
+
+        <div class="finance-panel">
+          <span class="eyebrow">Loan-Ready Summary</span>
+
+          <div class="metric">
+            <strong>Company</strong>
+            <p>Vorant Gold LLC</p>
+          </div>
+
+          <div class="metric">
+            <strong>Location</strong>
+            <p>Hobart, Indiana</p>
+          </div>
+
+          <div class="metric">
+            <strong>Primary Product</strong>
+            <p>Premium Lion’s Mane mushrooms</p>
+          </div>
+
+          <div class="metric">
+            <strong>Target Buyers</strong>
+            <p>Restaurants, chefs, specialty markets, private buyers, and wholesale food clients</p>
+          </div>
+
+          <div class="metric">
+            <strong>Growth Path</strong>
+            <p>Local supply accounts, recurring harvest availability, wholesale expansion, and future premium mushroom products</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">Request Information</span>
+
+          <h2>Availability begins with the harvest.</h2>
+
+          <p>
+            Vorant Gold is focused on building a premium Lion’s Mane supply model for Northwest Indiana and surrounding markets. Use this request form for restaurant interest, wholesale inquiries, private orders, or future harvest updates.
+          </p>
+
+          <p>
+            This form is ready visually. To make it send messages, connect it through your website host, Formspree, Netlify Forms, or another form handler.
+          </p>
+        </div>
+
+        <div class="contact-panel">
+          <form action="#" method="post">
             <div class="form-grid">
               <label>
-                Company / Business Name
-                <input type="text" name="company" placeholder="Company name" required />
+                Name
+                <input type="text" name="name" placeholder="Your name" />
               </label>
+
               <label>
-                Primary Contact
-                <input type="text" name="name" placeholder="Your name" required />
+                Business / Restaurant
+                <input type="text" name="business" placeholder="Business name if applicable" />
               </label>
             </div>
 
             <div class="form-grid">
               <label>
-                Email Address
-                <input type="email" name="email" placeholder="name@company.com" required />
+                Email
+                <input type="email" name="email" placeholder="name@email.com" />
               </label>
+
               <label>
-                Request Category
-                <span class="select-wrap">
-                  <select name="request_type" required>
-                    <option value="">Select one</option>
-                    <option>Executive / VIP Sourcing</option>
-                    <option>Client Appreciation</option>
-                    <option>Corporate Gifting</option>
-                    <option>Business Equipment / Tools</option>
-                    <option>Office / Furnishing Request</option>
-                    <option>Team Member Reward / Upgrade</option>
-                    <option>Specialty / Custom Concierge Request</option>
-                  </select>
-                </span>
+                Phone
+                <input type="tel" name="phone" placeholder="(555) 555-5555" />
               </label>
             </div>
 
             <div class="form-grid">
+              <label>
+                Inquiry Type
+                <select name="inquiry_type">
+                  <option value="">Select one</option>
+                  <option>Restaurant / chef inquiry</option>
+                  <option>Wholesale interest</option>
+                  <option>Specialty market inquiry</option>
+                  <option>Private buyer inquiry</option>
+                  <option>Harvest notification list</option>
+                </select>
+              </label>
+
               <label>
                 Estimated Quantity
-                <input type="number" name="quantity" placeholder="10" min="1" />
-              </label>
-              <label>
-                Estimated Budget
-                <input type="text" name="budget" placeholder="$500.00 " required />
-              </label>
-            </div>
-
-            <div class="form-grid">
-              <label>
-                Preferred Timeline
-                <input type="text" name="deadline" placeholder="Needed by April 10" required />
-              </label>
-              <label>
-                Delivery Structure
-                <span class="select-wrap">
-                  <select name="shipping_type" required>
-                    <option value="">Select one</option>
-                    <option>One Address</option>
-                    <option>Multiple Addresses</option>
-                    <option>Local Delivery</option>
-                    <option>Not Yet Determined</option>
-                  </select>
-                </span>
+                <input type="text" name="quantity" placeholder="Example: 5 lbs, 10 lbs, weekly order" />
               </label>
             </div>
 
             <label>
-              Request Details / Preferred Direction
-              <textarea
-                name="notes"
-                placeholder="Examples: executive gifting, client appreciation, premium tools or equipment, custom branded goods, office furnishings, milestone recognition, difficult-to-source business requests, understated black-and-gold presentation, private tailored solution"
-                required
-              ></textarea>
+              Notes
+              <textarea name="notes" placeholder="Tell us what you need, when you need it, and how you plan to use the Lion’s Mane."></textarea>
             </label>
 
-            <button type="submit" class="submit-btn">Submit Private Request</button>
+            <button type="submit" class="btn btn-solid">Submit Request</button>
 
-            <p class="small-note">
-              Vorant Gold operates on an approval-first, payment-first model. Projects are not procured until selections are approved and invoice payment has cleared.
+            <p class="note">
+              Vorant Gold LLC · Luxury Lion’s Mane Mushroom Cultivation · Hobart, Indiana
             </p>
-            <p class="small-note">
-              A review response is typically issued within 1 business day.
-            </p>
-            <p id="formStatus" class="form-status" aria-live="polite"></p>
           </form>
         </div>
       </div>
@@ -1054,118 +873,15 @@
   <footer>
     <div class="container footer-wrap">
       <div>
-        <div class="footer-title">Vorant Gold</div>
-        <div>Private Business Concierge</div>
-        <div class="footer-links">
-          <a href="mailto:quotes@vorantgold.com">quotes@vorantgold.com</a>
-          <a href="mailto:concierge@vorantgold.com">concierge@vorantgold.com</a>
-        </div>
+        <strong style="color: var(--cream);">Vorant Gold LLC</strong><br />
+        Luxury Lion’s Mane Mushroom Cultivation<br />
+        Hobart, Indiana
       </div>
-      <div>© 2026 Vorant Gold. All rights reserved.</div>
+
+      <div>
+        © 2026 Vorant Gold LLC. All rights reserved.
+      </div>
     </div>
   </footer>
-
-  <div class="modal" id="successModal" aria-hidden="true" role="dialog" aria-labelledby="successTitle">
-    <div class="modal-card">
-      <div class="modal-eyebrow">Request Received</div>
-      <h2 class="modal-title" id="successTitle">Your request has entered private review.</h2>
-      <p class="modal-copy">
-        Vorant Gold has received your submission. The request will be reviewed and a response will be sent with next steps based on your timeline, budget, and business needs.
-      </p>
-      <p class="modal-copy">
-        <strong>Please allow up to 1 business day</strong> for review and response.
-      </p>
-      <div class="modal-actions">
-        <button type="button" class="modal-btn" id="continueBtn">Continue</button>
-        <button type="button" class="modal-btn modal-close" id="closeModalBtn">Close</button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("vgForm");
-      const status = document.getElementById("formStatus");
-      const modal = document.getElementById("successModal");
-      const continueBtn = document.getElementById("continueBtn");
-      const closeModalBtn = document.getElementById("closeModalBtn");
-
-      if (!form || !status || !modal || !continueBtn || !closeModalBtn) return;
-
-      function openModal() {
-        modal.classList.add("show");
-        modal.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeModal() {
-        modal.classList.remove("show");
-        modal.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "";
-      }
-
-      function goToThankYou() {
-        window.location.href = "/thank-you.html";
-      }
-
-      continueBtn.addEventListener("click", goToThankYou);
-
-      closeModalBtn.addEventListener("click", function () {
-        closeModal();
-        goToThankYou();
-      });
-
-      modal.addEventListener("click", function (e) {
-        if (e.target === modal) {
-          closeModal();
-          goToThankYou();
-        }
-      });
-
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape" && modal.classList.contains("show")) {
-          closeModal();
-          goToThankYou();
-        }
-      });
-
-      form.addEventListener("submit", async function (e) {
-        e.preventDefault();
-
-        status.textContent = "Submitting your request...";
-        status.classList.remove("error");
-
-        if (!form.checkValidity()) {
-          form.reportValidity();
-          status.textContent = "";
-          return;
-        }
-
-        const formData = new FormData(form);
-
-        try {
-          const response = await fetch(form.action, {
-            method: "POST",
-            body: formData,
-            headers: {
-              "Accept": "application/json"
-            }
-          });
-
-          if (response.ok) {
-            form.reset();
-            status.textContent = "";
-            openModal();
-          } else {
-            status.textContent = "Submission error. Please review your information and try again.";
-            status.classList.add("error");
-          }
-        } catch (error) {
-          status.textContent = "Connection error. Please try again.";
-          status.classList.add("error");
-        }
-      });
-    });
-  </script>
 </body>
 </html>
